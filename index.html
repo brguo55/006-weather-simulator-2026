@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="ax9QMWdBCI4d9nF0tcl2KQ">
+<head data-page-node-id="d2df9ERZHFmzylrM3dSKVu">
+<meta charset="UTF-8" data-page-node-id="Cn5LyLDYc1p2DdbCwC9qGf">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" data-page-node-id="4WgSiJjA74fEvZ3q8WWuVu">
+<title>Weather Simulator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page-node-id="rcdQzjG1WYdPtompwC4BAK">
+<canvas id="c" data-page-node-id="MmrO8UNSl8IuMqc3lsrF0p"></canvas>
+<!--
+  微缩水景 · 雨 / 雪 / 樱（纯 Canvas 2D，零依赖；普通 <script>，直接双击打开也能运行）
+  顶部图标或数字键 1 / 2 / 3 切换天气；底部色板换水色；拖拽旋转、滚轮 / 双指缩放、点水面起涟漪
+    assets/rain-sound.js   录制的雨声（base64，约 2MB，异步加载不阻塞首帧）
+    js/engine.js           小工具 / 画布 / 相机投影 / 纸纹 / 手绘笔触
+    js/palette.js          墨色 / 纸色 / 七套水体主题
+    js/scene.js            底座 + 整块水体 + 涟漪 / 水花
+    js/effects/*.js        雨 / 雪 / 樱 三种天气效果
+    js/weather.js          天气调度：粒子、落定后的浮物、切换过渡、遮挡分层
+    js/ui.js               色板 / 天气图标（画在画布上的手绘控件）
+    js/audio.js            雨声 / 雪的风声 / 樱的春风与风铃
+    js/main.js             主循环 / 交互 / 启动
+-->
+<script src="assets/rain-sound.js" id="rain-sound" async></script>
+<script src="js/engine.js"></script>
+<script src="js/palette.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/effects/rain.js"></script>
+<script src="js/effects/snow.js"></script>
+<script src="js/effects/sakura.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
